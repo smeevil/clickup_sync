@@ -3,6 +3,6 @@ label_to_status:
   🚧 WIP: "in progress"
   🔍 Ready for Review: "dev review"
   ✅ Waiting for Merge: "po review"
-  🌟 Ready for PO Review: "approved"
+  🌟 Ready for PO Review: "planned"
   ⚠️ Changes Requested: "in progress"
   ✨ Merged: "staged"
