@@ -1,4 +1,6 @@
-bug: to do
-documentation: refined
-duplicate: planned
-help wanted: complete
+clickup_token: pk_4583724_AE5Y0KNSK02EA6VT7LKFW5SM51LE1S2U
+label_to_status:
+  bug: to do
+  documentation: refined
+  duplicate: planned
+  help wanted: complete
