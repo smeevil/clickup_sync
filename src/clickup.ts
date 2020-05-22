@@ -7,7 +7,8 @@ export const getClickUpId = (context: Context<WebhookPayloadPullRequest>): strin
   // const { title } = context.payload.pull_request
   // const matches = title.match(/#([aA-zZ0-9]+)/)
   // return matches?.length == 2 ? matches[1] : null
-  const [id] = context.payload.pull_request.head.ref.split("-")
+  const [ id ] = context.payload.pull_request.head.ref.split('-')
+  console.log(`extracted ${id} from ${context.payload.pull_request.head.ref}`)
   return id
 }
 
