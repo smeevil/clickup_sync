@@ -597,7 +597,7 @@
         "affectsGlobalScope": false
       },
       "../src/clickup.ts": {
-        "version": "d89822ffc58076ae8e79106e23249a6b993490a5fa00c35576f5f274f5815a5a",
+        "version": "808756321d2986ffe43a79d187a9b1d08b15e5ecba644127c6a23759f22b2458",
         "signature": "8b72c206743aebd1bff4e964bfc297bb30614e69525f4f35fcaac33c5fa0cddf",
         "affectsGlobalScope": false
       },
@@ -761,8 +761,6 @@
       "resolveJsonModule": true,
       "pretty": false,
       "skipLibCheck": true,
-      "watch": true,
-      "preserveWatchOutput": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
