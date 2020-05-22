@@ -1,0 +1,8 @@
+clickup_token: pk_example_token
+label_to_status:
+  🚧 WIP: "in progress"
+  🔍 Ready for Review: "dev review"
+  🌟 Ready for PO Review: "po review"
+  ✅ Waiting for Merge: "approved"
+  ⚠️ Changes Requested: "in progress"
+  ✨ Merged: "staged"
