@@ -15,6 +15,11 @@ export const getClickUpId = (context: Context<WebhookPayloadPullRequest>): strin
 export const updateClickUp = async (status: string, context: Context<WebhookPayloadPullRequest>): Promise<void> => {
   const token = await getClickUpToken(context)
   const taskId = getClickUpId(context)
+  if (!taskId) {
+    console.log('Could not find task id :(')
+    return
+  }
+
   console.log(`setting status for ${taskId} to ${status}`)
 
   const url = `https://api.clickup.com/api/v2/task/${taskId}`
