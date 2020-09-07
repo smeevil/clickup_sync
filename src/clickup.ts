@@ -1,18 +1,21 @@
-import { WebhookPayloadPullRequest } from '@octokit/webhooks'
+import { EventPayloads } from '@octokit/webhooks'
 import fetch, { Response } from 'node-fetch'
 import { Context } from 'probot'
 import { getClickUpToken } from './config'
 
-export const getClickUpId = (context: Context<WebhookPayloadPullRequest>): string | null => {
-  // const { title } = context.payload.pull_request
-  // const matches = title.match(/#([aA-zZ0-9]+)/)
-  // return matches?.length == 2 ? matches[1] : null
-  const [ id ] = context.payload.pull_request.head.ref.split('-')
+export const getClickUpId = (context: Context<EventPayloads.WebhookPayloadPullRequest>): string | null => {
+  // CU-7pm31p-fdafadsfas
+  // 7pm31p-fdafadsfas
+
+
+  // const [ id ] = context.payload.pull_request.head.ref.split('-')
+  const matches = context.payload.pull_request.head.ref.match(/^((CU-.*?)|(.*?))-/)
+  const id = matches ? matches[1].replace(/^CU-/, '') : null
   console.log(`extracted ${id} from ${context.payload.pull_request.head.ref}`)
   return id
 }
 
-export const updateClickUp = async (status: string, context: Context<WebhookPayloadPullRequest>): Promise<void> => {
+export const updateClickUp = async (status: string, context: Context<EventPayloads.WebhookPayloadPullRequest>): Promise<void> => {
   const token = await getClickUpToken(context)
   const taskId = getClickUpId(context)
   if (!taskId) {

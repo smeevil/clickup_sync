@@ -1,7 +1,7 @@
 import nock from 'nock'
 import clickupSync from '../src'
 import { Probot } from 'probot'
-import payload from './fixtures/pull_request.json'
+import payload from './fixtures/pull_request_cu.json'
 
 const fs = require('fs')
 const path = require('path')
@@ -11,20 +11,20 @@ describe('My Probot app', () => {
   let mockCert: string
 
   beforeAll((done: Function) => {
-    mockCert = fs.readFileSync(path.join(__dirname, 'fixtures/mock-cert.pem')).toString()
+    mockCert = fs.readFileSync(path.join(__dirname, '../.data/private-key.pem')).toString()
     done()
   })
 
   beforeEach(() => {
     nock.disableNetConnect()
-    probot = new Probot({ id: 65587, cert: mockCert })
+    probot = new Probot({ id: 65587, privateKey: mockCert })
     // Load our app into probot
     probot.load(clickupSync)
   })
 
   test('updates the status when adding a label', async (done) => {
     // Uncomment if you want to re-record the http calls
-    // nock.recorder.rec()
+    nock.recorder.rec()
 
     nock('https://api.github.com:443', { 'encodedQueryParams': true })
       .post('/app/installations/9053668/access_tokens', {})

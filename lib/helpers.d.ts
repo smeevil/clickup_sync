@@ -1,4 +1,4 @@
-import { WebhookPayloadPullRequest } from '@octokit/webhooks';
+import { EventPayloads } from '@octokit/webhooks';
 import { Context } from 'probot';
 import { ILabel } from './interfaces';
-export declare const mapLabelsToStatus: (labels: ILabel[], context: Context<WebhookPayloadPullRequest>) => Promise<string>;
+export declare const mapLabelsToStatus: (labels: ILabel[], context: Context<EventPayloads.WebhookPayloadPullRequest>) => Promise<string>;

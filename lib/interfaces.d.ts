@@ -5,7 +5,7 @@ export interface ILabel {
     name: string;
     color: string;
     default: boolean;
-    description: string;
+    description?: string;
 }
 export interface IConfig {
     clickup_token: string;
