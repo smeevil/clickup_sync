@@ -842,12 +842,12 @@
         "affectsGlobalScope": false
       },
       "../src/config.ts": {
-        "version": "d29987a7d696f04ed2640ac6dfadea7d8ecc610f7e66d7c7e513e5b8308da605",
+        "version": "e30df4ba6a50d17f488a4d2de6b59efdebc515a1b09793a8be83acbabe0f4d0a",
         "signature": "405992484a3aace49b14a7421da192bea398e74ddde1fb034fa9960b34aec99c",
         "affectsGlobalScope": false
       },
       "../src/clickup.ts": {
-        "version": "9a0428b69cb750204a0f6dcb7cad0fb645043fe46b6fb43bb770d16a0a45c848",
+        "version": "65b2ea944223c970080d8f52cbc0a4c21f9892055f04dbe629094a79f657d08a",
         "signature": "b6e290d42aec87bfa699d775dd047e925be9b88cd928c7b0c5e777aad8fb21ee",
         "affectsGlobalScope": false
       },
@@ -857,7 +857,7 @@
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "ee350a4eee5369661f5ecb5bdfb46f71f1468d850cdd8aa82acfd12dd800c974",
+        "version": "215d157c967d7b49220fe95805dd18c697c7539839cb63f9af545fb1aa447b18",
         "signature": "babba377523032ddbe83ecc1bd3caf09a82613fcc277db91fdcd07e993e1d436",
         "affectsGlobalScope": false
       },
