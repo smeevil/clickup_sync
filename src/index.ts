@@ -12,6 +12,11 @@ const processLabels = async (context: Context<EventPayloads.WebhookPayloadPullRe
 }
 
 export = (app: Application) => {
+  app.on("*", async (context) => {
+    console.log('incoming message', JSON.stringify(context))
+    context.log.info({ event: context.event, action: context.payload.action });
+  })
+
   app.on('pull_request.labeled', async (context) => {
     await processLabels(context)
   })
