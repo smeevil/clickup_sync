@@ -4,6 +4,7 @@ import { updateClickUp } from './clickup'
 import { mapLabelsToStatus } from './helpers'
 
 const processLabels = async (context: Context<EventPayloads.WebhookPayloadPullRequest>): Promise<void> => {
+  console.log("context in processLabels", JSON.stringify(context))
   const { labels } = context.payload.pull_request
   const status = await mapLabelsToStatus(labels, context)
   await mapLabelsToStatus(labels, context)
