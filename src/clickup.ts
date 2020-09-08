@@ -4,7 +4,7 @@ import { Context } from 'probot'
 import { getClickUpToken } from './config'
 
 export const getClickUpId = (context: Context<EventPayloads.WebhookPayloadPullRequest>): string | null => {
-  console.log("context in getClickUpId", JSON.stringify(context))
+  // console.log("context in getClickUpId", JSON.stringify(context))
   // CU-7pm31p-fdafadsfas
   // 7pm31p-fdafadsfas
 
